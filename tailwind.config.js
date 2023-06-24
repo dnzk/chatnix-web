@@ -30,14 +30,16 @@ module.exports = {
       'neutral-dark': {
         100: '#3D4E54',
         150: '#BBC1C3',
-        200: '#6E7A7F'
+        200: '#6E7A7F',
+        250: '#083D4F',
       },
       'neutral-light': {
         100: '#D4DCDF',
       }
     },
     dropShadow: {
-      'button': '5px 10px #000000'
+      'button': '5px 10px #000000',
+      'input': '3px 5px #D4DCDF'
     },
   },
   plugins: [],
