@@ -1,5 +1,5 @@
-import Unauthorized from "@/components/Layouts/unauthorized"
-import LinkButton from "@/components/Buttons/link-button"
+import Unauthorized from "@/components/layouts/unauthorized"
+import LinkButton from "@/components/buttons/link-button"
 
 export default function Home() {
   return (
@@ -9,6 +9,9 @@ export default function Home() {
       </LinkButton>
       <LinkButton href="/login">
         Log In
+      </LinkButton>
+      <LinkButton href="/room">
+        Room
       </LinkButton>
     </Unauthorized>
   )
