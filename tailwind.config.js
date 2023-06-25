@@ -15,7 +15,8 @@ module.exports = {
     },
     fontSize: {
       sm: '0.8rem',
-      base: '1rem'
+      base: '1rem',
+      lg: '1.125rem'
     },
     fontFamily: {
       'serif': ['Inter'],
@@ -25,7 +26,11 @@ module.exports = {
       'white': '#ffffff',
       'purple': {
         100: '#9068A3',
-        200: '#816F8A'
+        200: '#816E8A',
+        250: '#9747FF'
+      },
+      'green': {
+        100: '#69858D'
       },
       'neutral-dark': {
         100: '#3D4E54',

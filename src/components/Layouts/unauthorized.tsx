@@ -1,4 +1,4 @@
-import Logo from "../Logo/logo";
+import Logo from "../logo/logo";
 
 export default function Unauthorized({ children }: any) {
   const bg = 'bg-purple-100';
