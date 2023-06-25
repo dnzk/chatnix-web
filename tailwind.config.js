@@ -32,11 +32,16 @@ module.exports = {
       'green': {
         100: '#69858D'
       },
+      'blue': {
+        50: '#CBF2FF',
+        100: '#47D3FF',
+      },
       'neutral-dark': {
         100: '#3D4E54',
         150: '#BBC1C3',
         200: '#6E7A7F',
         250: '#083D4F',
+        350: '#999999'
       },
       'neutral-light': {
         100: '#D4DCDF',

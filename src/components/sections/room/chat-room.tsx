@@ -1,3 +1,4 @@
+import MessageSequence from "./message-sequence"
 import RoomName from "./room-name"
 
 export default function ChatRoom() {
@@ -5,5 +6,6 @@ export default function ChatRoom() {
 
   return <div className={styles}>
     <RoomName />
+    <MessageSequence />
   </div>
 }
