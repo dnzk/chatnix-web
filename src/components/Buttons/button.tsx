@@ -1,10 +1,10 @@
 import { standard } from './styles'
 
-export default function Button({ children: children, className: className }: any) {
-  const buttonClassNames = `${standard} ${className || ''}`
+export default function Button({ children: children, ...p }: any) {
+  const buttonClassNames = `${standard} ${p?.className || ''}`
 
   return (
-    <button className={buttonClassNames}>
+    <button className={buttonClassNames} {...p}>
       {children}
     </button>
   );
