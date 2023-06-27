@@ -30,3 +30,18 @@ export async function signIn(params: ISignInParams) {
     throw new Error('Invalid credentials')
   }
 }
+
+export interface ISignUpParams {
+  username: string;
+  email: string;
+  password: string;
+}
+
+export async function signUp(params: ISignUpParams) {
+  const result = await post('/sign_up', params)
+  if (result.ok) {
+    return
+  } else {
+    throw new Error('Invalid params')
+  }
+}
