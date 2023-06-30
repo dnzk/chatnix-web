@@ -19,7 +19,7 @@ module.exports = {
       lg: '1.125rem'
     },
     fontFamily: {
-      'serif': ['Inter'],
+      'sans': ['Inter', 'sans-serif'],
       'display': ['PT Serif', 'serif']
     },
     colors: {

@@ -1,14 +1,15 @@
 import MessageSender from "./message-sender"
 import Timestamp from "./timestamp"
 
-export default function Message() {
-  return <div className="flex items-start gap-2.5">
+export default function Message({ content, time, sender, ...props }: any) {
+  const containerStyle = `flex items-start gap-2.5 ${props.className || ''}`
+  return <div className={containerStyle}>
     <div className="flex">
-      <MessageSender />
-      <Timestamp />
+      <MessageSender sender={sender} />
+      <Timestamp time={time} />
     </div>
     <p className="flex-1">
-      Now we can begin working on lots of happy little things. Nature is so fantastic, enjoy it. Let it make you happy. Now we can begin working on lots of happy little things. Nature is so fantastic, enjoy it. Let it make you happy. Now we can begin working on lots of happy little things. Nature is so fantastic, enjoy it. Let it make you happy. Now we can begin working on lots of happy little things. Nature is so fantastic, enjoy it. Let it make you happy. Now we can begin working on lots of happy little things. Nature is so fantastic, enjoy it. Let it make you happy. Now we can begin working on lots of happy little things. Nature is so fantastic, enjoy it. Let it make you happy. Now we can begin working on lots of happy little things. Nature is so fantastic, enjoy it. Let it make you happy. Now we can begin working on lots of happy little things. Nature is so fantastic, enjoy it. Let it make you happy.
+      {content}
     </p>
   </div>
 }
