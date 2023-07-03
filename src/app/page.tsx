@@ -10,9 +10,6 @@ export default function Home() {
       <LinkButton href="/login">
         Log In
       </LinkButton>
-      <LinkButton href="/room">
-        Room
-      </LinkButton>
     </Unauthorized>
   )
 }
