@@ -1,20 +1,20 @@
 'use client'
 
-import { initGroupRoom } from "@/app/lib/api"
+import { initDmRoom } from "@/app/lib/api"
 import Authorized, { SocketContext } from "@/components/layouts/authorized"
 import ChatRoom from "@/components/sections/room/chat-room"
 import { useParams } from "next/navigation"
 import { useContext, useEffect, useState } from "react"
 
-export default function RoomIndex() {
-  const { room } = useParams()
+export default function ConversationIndex() {
+  const { userId } = useParams()
   const [roomData, setRoomData] = useState({} as any)
-  const [messages, setMessages] = useState([] as any[])
+  const [messages, setMessages] = useState([] as any)
   const socket = useContext(SocketContext)
   const [channel, setChannel] = useState({} as any)
 
   useEffect(() => {
-    initGroupRoom(room)
+    initDmRoom(userId)
       .then((result) => result?.data)
       .then((data) => {
         setRoomData(data?.room)

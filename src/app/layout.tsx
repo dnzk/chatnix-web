@@ -8,6 +8,8 @@ export const metadata = {
   description: 'Chat App powered by Elixir and Phoenix',
 }
 
+const bodyStyles = `relative ${inter.className}`
+
 export default function RootLayout({
   children,
 }: {
@@ -15,7 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={bodyStyles}>
+        {children}
+        <div id="modal-root"></div>
+      </body>
     </html>
   )
 }

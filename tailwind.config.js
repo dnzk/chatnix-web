@@ -30,7 +30,8 @@ module.exports = {
         250: '#9747FF'
       },
       'green': {
-        100: '#69858D'
+        100: '#69858D',
+        200: '#5B925A',
       },
       'blue': {
         50: '#CBF2FF',
@@ -45,11 +46,13 @@ module.exports = {
       },
       'neutral-light': {
         100: '#D4DCDF',
+        150: '#CDCDCD'
       }
     },
     dropShadow: {
       'button': '5px 10px #000000',
-      'input': '3px 5px #D4DCDF'
+      'input': '3px 5px #D4DCDF',
+      'squareButton': '3px 3px #000000'
     },
   },
   plugins: [],

@@ -77,7 +77,16 @@ export async function getUsers() {
   }
 }
 
-type ObjectID = number;
+export async function getRooms() {
+  const result = await get('/rooms')
+  if (result.ok) {
+    return result.json()
+  } else {
+    throw new Error('Error requesting rooms')
+  }
+}
+
+type ObjectID = number | string;
 
 export interface IMessage {
   content: string;
@@ -94,7 +103,7 @@ export interface IRoom {
   messages: IMessage[]
 }
 
-export async function initConversation(id: string) {
+export async function initDmRoom(id: ObjectID) {
   const result = await post('/init_conversation', {
     id
   })
@@ -102,5 +111,29 @@ export async function initConversation(id: string) {
     return result.json()
   } else {
     throw new Error('Error init conversation')
+  }
+}
+
+export async function initGroupRoom(roomId: ObjectID) {
+  const result = await post('/init_conversation', {
+    room_id: roomId
+  })
+  if (result.ok) {
+    return result.json()
+  } else {
+    throw new Error('Error init group room')
+  }
+}
+
+export async function createNewRoom(name: string, participants: [{ id: ObjectID }], isPrivate = false) {
+  const result = await post('/create_new_room', {
+    name,
+    participants: [{ id: 2 }],
+    is_private: isPrivate
+  })
+  if (result.ok) {
+    return result.json()
+  } else {
+    throw new Error('Error creating new room')
   }
 }
