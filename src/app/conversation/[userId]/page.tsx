@@ -50,6 +50,10 @@ export default function ConversationIndex() {
   }
 
   return <Authorized>
-    <ChatRoom messages={messages} onSend={handleMessageSend} />
+    <ChatRoom
+      messages={messages}
+      onSend={handleMessageSend}
+      roomName={roomData.name}
+    />
   </Authorized>
 }

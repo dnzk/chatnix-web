@@ -1,10 +1,10 @@
-export default function RoomName() {
+export default function RoomName({ name, ...props }: any) {
   const bodyStyle = "border-b border-purple-250 pb-[10px]"
   const textStyle = "text-purple-250 text-lg"
 
   return (
     <div className={bodyStyle}>
-      <p className={textStyle}>king_cooper</p>
+      <p className={textStyle}>{name}</p>
     </div>
   );
 }

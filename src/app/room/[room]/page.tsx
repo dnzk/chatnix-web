@@ -50,6 +50,10 @@ export default function RoomIndex() {
   }
 
   return <Authorized>
-    <ChatRoom messages={messages} onSend={handleMessageSend} />
+    <ChatRoom
+      messages={messages}
+      onSend={handleMessageSend}
+      roomName={roomData.name}
+    />
   </Authorized>
 }
