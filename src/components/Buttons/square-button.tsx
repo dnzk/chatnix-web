@@ -1,4 +1,7 @@
+import { greenButton } from "./styles"
+
 export type SquareButtonSize = 'small' | 'medium' | 'large'
+greenButton
 
 export default function SquareButton({ children, size = 'medium', ...props }: any) {
   function getDimension() {
@@ -11,11 +14,8 @@ export default function SquareButton({ children, size = 'medium', ...props }: an
     return `w-[${pixelSize}px] h-[${pixelSize}px]`
   }
 
-  const background = 'bg-green-200'
-  const hover = 'hover:drop-shadow-squareButton'
-  const active = 'active:bg-neutral-dark-150 active:drop-shadow-button'
   const dimension = getDimension()
-  const styles = `rounded ${hover} ${active} ${dimension} ${background} ${props.className || ''}`
+  const styles = `${greenButton} ${dimension} ${props.className || ''}`
 
   return <button {...props} className={styles}>
     {children}

@@ -4,6 +4,7 @@ const active = 'active:bg-neutral-dark-150'
 const text = 'text-center'
 
 const standard = `${base} ${hover} ${active} ${text}`
+const greenButton = 'bg-green-200 hover:drop-shadow-squareButton active:bg-neutral-dark-150 active:drop-shadow-button rounded text-neutral-light-150'
 
 export {
   base,
@@ -11,4 +12,5 @@ export {
   active,
   text,
   standard,
+  greenButton
 }
